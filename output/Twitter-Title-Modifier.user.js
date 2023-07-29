@@ -2,10 +2,10 @@
 // @name         Twitter Title Modifier
 // @namespace    http://tampermonkey.net/
 // @version      0.3
-// @description  Ändert den Titel der Twitter-Seiten entsprechend.
+// @description  Changes Tab Name from "/ X" back to "/ Twitter"
 // @author       Stevelo and bennett-sh
 // @match        https://twitter.com/*
-// @run-at   document-start
+// @run-at       document-start
 // @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
 // @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
 // @icon         https://abs.twimg.com/favicons/twitter.2.ico
