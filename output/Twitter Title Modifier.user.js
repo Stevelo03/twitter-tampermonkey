@@ -6,8 +6,8 @@
 // @author       Stevelo
 // @match        https://twitter.com/*
 // @run-at   document-start
-// @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/blob/main/twittertempermonkey.js
-// @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/blob/main/twittertempermonkey.js
+// @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter%20Title%20Modifier.user.js
+// @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter%20Title%20Modifier.user.js
 // @icon         https://abs.twimg.com/favicons/twitter.2.ico
 // ==/UserScript==
 
