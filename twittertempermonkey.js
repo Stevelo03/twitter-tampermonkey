@@ -7,6 +7,8 @@
 // @match        https://twitter.com/*
 // @grant        none
 // @run-at   document-start
+// @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/blob/main/twittertempermonkey.js
+// @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/blob/main/twittertempermonkey.js
 // @icon         https://abs.twimg.com/favicons/twitter.2.ico
 // ==/UserScript==
 
