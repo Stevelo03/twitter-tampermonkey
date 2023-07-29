@@ -12,22 +12,21 @@
 // ==/UserScript==
 
 (function() {
-    'use strict';
+    'use strict'
 
-    // Funktion zum Ändern des Titels
-    function modifyTitle() {
-        var pageTitle = document.title;
-        var replacedTitle = pageTitle.replace(/ \/ .+$/, ' / Twitter');
-        document.title = replacedTitle;
+    const $ = document.querySelector.bind(document)
+
+    function modifyTitle(title) {
+        title.textContent = title.textContent.replace(/ \/ .+$/, ' / Twitter')
     }
 
-    // Änderungen durchführen, wenn die Seite vollständig geladen ist
-    window.addEventListener('load', function() {
-        modifyTitle();
-    });
-
-    // Änderungen durchführen, wenn eine neue Seite geladen wird (AJAX)
-    document.addEventListener('DOMSubtreeModified', function() {
-        modifyTitle();
-    });
-})();
+    // try grabbing the title every 300ms; once grabbed observe it's content
+    const grabInterval = setInterval(() => {
+        const title = $('title')
+        if(title != null) {
+            clearInterval(grabInterval)
+            const observer = new MutationObserver(() => modifyTitle(title))
+            observer.observe(title, { childList: true })
+        }
+    }, 300)
+})()
