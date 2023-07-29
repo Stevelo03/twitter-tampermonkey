@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Twitter Title Modifier
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.3.1
 // @description  Changes Tab Name from "/ X" back to "/ Twitter"
 // @author       Stevelo and bennett-sh
 // @match        https://twitter.com/*
