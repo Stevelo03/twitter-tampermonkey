@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         Twitter Title Modifier
 // @namespace    http://tampermonkey.net/
-// @version      0.3.1
+// @version      0.4.1
 // @description  Changes Tab Name from "/ X" back to "/ Twitter"
 // @author       Stevelo and bennett-sh
 // @match        https://twitter.com/*
+// @match        https://mobile.twitter.com/*
+// @match        https://api.twitter.com/*
 // @run-at       document-start
 // @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
 // @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
