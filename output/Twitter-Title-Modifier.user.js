@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Twitter Title Modifier
 // @namespace    http://tampermonkey.net/
-// @version      0.3.1
-// @description  Changes Tab Name from "/ X" back to "/ Twitter"
+// @version      0.4
+// @description  Changes Tab Name from "/ X" back to "/ Twitter" and fixes the Tweet button
 // @author       Stevelo and bennett-sh
 // @match        https://twitter.com/*
 // @run-at       document-start
@@ -12,21 +12,31 @@
 // ==/UserScript==
 
 (function() {
-    'use strict'
+    'use strict';
 
-    const $ = document.querySelector.bind(document)
+    const $ = document.querySelector.bind(document);
 
     function modifyTitle(title) {
-        title.textContent = title.textContent.replace(/ \/ .+$/, ' / Twitter')
+        title.textContent = title.textContent.replace(/ \/ .+$/, ' / Twitter');
     }
 
-    // try grabbing the title every 300ms; once grabbed observe it's content
-    const grabInterval = setInterval(() => {
-        const title = $('title')
-        if(title != null) {
-            clearInterval(grabInterval)
-            const observer = new MutationObserver(() => modifyTitle(title))
-            observer.observe(title, { childList: true })
+    function modifyButtonText() {
+        const postButton = Array.from(document.querySelectorAll('span')).find(el => /Post(en)?/.test(el.textContent));
+        if (postButton) {
+            postButton.textContent = 'Tweet';
         }
-    }, 300)
-})()
+    }
+
+    function checkAndModifyTitle() {
+        const title = $('title');
+        if (title != null) {
+            modifyTitle(title);
+        }
+    }
+
+    const interval = setInterval(() => {
+        checkAndModifyTitle();
+        modifyButtonText(); 
+    }, 300);
+})();
+
