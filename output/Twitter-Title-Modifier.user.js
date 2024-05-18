@@ -7,6 +7,9 @@
 // @match        https://twitter.com/*
 // @match        https://mobile.twitter.com/*
 // @match        https://api.twitter.com/*
+// @match        https://api.x.com/*
+// @match        https://x.com/*
+// @match        https://mobile.x.com/*
 // @run-at       document-start
 // @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
 // @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
