@@ -11,8 +11,8 @@
 // @match        https://x.com/*
 // @match        https://mobile.x.com/*
 // @run-at       document-start
-// @updateURL    https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
-// @downloadURL  https://github.com/Stevelolp/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
+// @updateURL    https://github.com/Stevelo03/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
+// @downloadURL  https://github.com/Stevelo03/twitter-tampermonkey/raw/main/output/Twitter-Title-Modifier.user.js
 // @icon         https://abs.twimg.com/favicons/twitter.2.ico
 // ==/UserScript==
 
